@@ -60,17 +60,18 @@ tabla.addEventListener("click", function (event) {
        // Obtén la fila a editar
        const fila = event.target.closest("tr");
        if (fila) {
-         // Extrae los datos de la fila seleccionada para editar
-         const nombre = fila.cells[0].textContent;
+       const nombre = fila.cells[0].textContent;
          const correo = fila.cells[1].textContent;
          const peliculas = fila.cells[2].textContent;
          const boletos = fila.cells[4].textContent;
+         const Poster = fila.cells[3].children[0].src;
   
          // Rellena el formulario con los datos de la fila
          document.getElementById("nombre").value = nombre;
          document.getElementById("correo").value = correo;
          document.getElementById("peliculas").value = peliculas;
          document.getElementById("boletos").value = boletos;
+         document.getElementById("posterPelicula").src = Poster;
 
          // Elimina la fila seleccionada
          fila.remove();
