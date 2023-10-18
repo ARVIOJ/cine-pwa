@@ -2,7 +2,7 @@
     "name": "Cine PWA",
     "short_name": "Cine",
     "description": "Pagina para comprar boletos de cine",
-    "start_url": "cine-pwa/",
+    "start_url": "/",
     "display": "standalone",
     "form_factor": "mobile",
     "orientation": "portrait",
