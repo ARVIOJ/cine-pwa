@@ -1,0 +1,4 @@
+.formularioPelicula{
+    display: grid;
+    place-content: center;
+}
