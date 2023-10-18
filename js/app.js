@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("../sw.js")
+    .register("cine-pwa/sw.js")
     .then(function (registration) {
       console.log("Service Worker registrado con éxito:", registration);
     })
