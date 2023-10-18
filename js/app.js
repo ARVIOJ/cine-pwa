@@ -60,7 +60,8 @@ tabla.addEventListener("click", function (event) {
        // Obtén la fila a editar
        const fila = event.target.closest("tr");
        if (fila) {
-       const nombre = fila.cells[0].textContent;
+         // Extrae los datos de la fila seleccionada para editar
+         const nombre = fila.cells[0].textContent;
          const correo = fila.cells[1].textContent;
          const peliculas = fila.cells[2].textContent;
          const boletos = fila.cells[4].textContent;
@@ -79,11 +80,22 @@ tabla.addEventListener("click", function (event) {
 
   } else if (event.target.classList.contains("eliminar")) {
     // Código para eliminar la fila
-    const rowIndex = event.target.parentElement.parentElement.rowIndex;
-    tabla.deleteRow(rowIndex);
+   alerta();
+    
   }
 });
 
+function alerta(){
+    var mensaje;
+    var opcion = confirm("Deseas eliminar el registro?");
+    if (opcion == true) {
+        mensaje = "Eliminado con éxito";
+        const rowIndex = event.target.parentElement.parentElement.rowIndex;
+        tabla.deleteRow(rowIndex);
+	} else {
+	    mensaje = "Cancelado";
+	}
+}
 
 const nombrePeliculas = document.getElementById("peliculas");
 const posterPelicula = document.getElementById("posterPelicula");
@@ -114,3 +126,4 @@ nombrePeliculas.addEventListener(
   },
   false
 );
+
